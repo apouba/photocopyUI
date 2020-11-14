@@ -30,7 +30,7 @@
 
 <div class="container">
     <div class="container" style="height:400px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
-        <h5>Enter 4 Digit Account Number:</h5>
+        <h5>Enter 4-Digit Account Code:</h5>
         <form action="options.html">
             <div>
                 <div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
@@ -42,19 +42,19 @@
                         </div>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '1';">1</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '2';">2</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '3';">3</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(1)">1</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(2)">2</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(3)">3</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '4';">4</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '5';">5</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '6';">6</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(4)">4</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(5)">5</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(6)">6</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '7';">7</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '8';">8</button>
-                        <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value + '9';">9</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(7)">7</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(8)">8</button>
+                        <button type="button" class="btn btn-outline-secondary py-3" onclick="input_digit(9)">9</button>
                     </div>
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-secondary py-3" onclick="document.getElementById('account').value=document.getElementById('account').value.slice(0, -1);">&lt;</button>
@@ -73,5 +73,11 @@
     function redirect()
         {
             window.location.href = "numcopies.html";
-        } 
+        }
+
+    function input_digit(x) {
+        if (document.getElementById('account').value.length < 4) {
+            document.getElementById('account').value=document.getElementById('account').value + x.toString()
+        }
+    }
 </script>
