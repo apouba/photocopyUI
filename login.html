@@ -37,7 +37,7 @@
                     <div class="btn-group">
                         <div id="divOuter">
                             <div id="divInner">
-                                <input id="account" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" onKeyPress="if(this.value.length==4) return false;" required/>
+                                <input id="account" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required/>
                             </div>
                         </div>
                     </div>
@@ -70,10 +70,12 @@
 
 
 <script>
-    function redirect()
-        {
+    function redirect() {
+        if (document.getElementById('account').value.length == 4) {
             window.location.href = "numcopies.html";
+            localStorage.setItem("code", document.getElementById('account').value);
         }
+    }
 
     function input_digit(x) {
         if (document.getElementById('account').value.length < 4) {

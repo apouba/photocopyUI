@@ -6,6 +6,9 @@
 
 <div class="container">
     <div class="container" style="height:400px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
+        <h5 style="float: right;">Account: <script>
+            document.write(localStorage.getItem("code"))
+        </script></h5>
         <h5>Options:</h5><hr>
                          <form>
                              <span style="font-weight:bold; margin-right:10px;">Siding:</span>
@@ -81,14 +84,11 @@
                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
                                  <label class="form-check-label" for="inlineCheckbox7">Bright</label>
                              </div>
-                             <hr>
-
-
-
-
+                             <br>
+                             <br>
                          </form>
         <button class="btn btn-primary" onclick="back()">Back</button>
-        <button class="btn btn-primary" onclick="redirect()" style="float: right">Submit Job</button>
+        <button class="btn btn-primary" onclick="redirect()" style="float: right">Review Job</button>
     </div>
 </div>
 
