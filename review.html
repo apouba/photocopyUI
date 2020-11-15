@@ -35,14 +35,15 @@
                 </script>
             </span>
             <hr>
-            <span style="margin-right:10px;">
+            <span style="margin-right:10px;" onload="show()">
                 <b>Separator Page: </b>
                 <script>
                     document.write(localStorage.getItem("seperator"))
+                    //value = localStorage.getItem("seperator")
                 </script>
             </span>
             <!-- make this conditional -->
-            <span style="margin-left:50px; margin-right:10px;">
+            <span id="hideDiv" style="margin-left:50px; margin-right:10px;" >
                 <b>Paper Source: </b>
                 <script>
                     document.write(localStorage.getItem("seperator_source"))
@@ -69,4 +70,14 @@
   function back() {
       window.location.href = "options.html";
   }
+    
+    function show() {
+        var val = localStorage.getItem("seperator");
+        if (val === "No") {
+            document.getElementById('hideDiv').style.visibility = "hidden";
+        }
+        else {
+            document.write("");
+        }
+    }
 </script>
