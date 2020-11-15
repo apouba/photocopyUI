@@ -11,9 +11,9 @@
         </script></h5>
         <h5><b>Options</b></h5><hr>
                          <form>
-                              <span style="font-weight:bold; margin-right:10px;">Source Bin:</span>
+                              <span style="font-weight:bold; margin-right:10px;">Paper Source:</span>
                               <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="source" value="A">
+                                  <input class="form-check-input" type="radio" name="source" value="A" checked>
                                   <label class="form-check-label" for="source">A</label>
                               </div>
                               <div class="form-check form-check-inline">
@@ -26,9 +26,9 @@
                               </div>
                               <hr>
 
-                             <span style="font-weight:bold; margin-right:10px;">Siding:</span>
+                             <span style="font-weight:bold; margin-right:10px;">Sides:</span>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="sides" value="1&rarr;1">
+                                 <input class="form-check-input" type="radio" name="sides" value="1&rarr;1" checked>
                                  <label class="form-check-label" for="sides">1&rarr;1</label>
                              </div>
                              <div class="form-check form-check-inline">
@@ -48,9 +48,9 @@
                              <span style="font-weight:bold; margin-right:10px;">Separator Page:</span>
                              <div class="form-check form-check-inline">
                                  <input style="margin-left:10px; display: inline;" type="checkbox" class="form-check-input" id="seperator">
-                                 <span class="conditional" style="font-weight:bold; margin-left:50px; margin-right:10px;">Source:</span>
+                                 <span class="conditional" style="font-weight:bold; margin-left:50px; margin-right:10px;">Paper Source:</span>
                                   <div class="conditional form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="seperator_source" value="A">
+                                      <input class="form-check-input" type="radio" name="seperator_source" value="A" checked>
                                       <label class="form-check-label" for="seperator_source">A</label>
                                   </div>
                                   <div class="conditional form-check form-check-inline">
@@ -71,15 +71,15 @@
                                  </div>
                              </form>-->
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" name="brightness" value="Dark">
+                                 <input class="form-check-input" type="radio" name="brightness" value="Dark">
                                  <label class="form-check-label" for="brightness">Dark</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" name="brightness" value="Normal">
+                                 <input class="form-check-input" type="radio" name="brightness" value="Normal" checked>
                                  <label class="form-check-label" for="brightness">Normal</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" name="brightness" value="Bright">
+                                 <input class="form-check-input" type="radio" name="brightness" value="Bright">
                                  <label class="form-check-label" for="brightness">Bright</label>
                              </div>
                              <br>
@@ -109,16 +109,17 @@
         } 
         // store seperator settings
         if (document.getElementById("seperator").checked) {
+            localStorage.setItem("seperator", "Yes")
             var seperator_source = document.getElementsByName("seperator_source"); 
             for(i = 0; i < seperator_source.length; i++) { 
                 if (seperator_source[i].checked) {
                     console.log(seperator_source[i].value)
-                    localStorage.setItem("seperator_source", "Yes - Bin " + seperator_source[i].value);
+                    localStorage.setItem("seperator_source", "Bin " + seperator_source[i].value);
                 }    
             } 
         }
         else {
-            localStorage.setItem("seperator_source", "No");
+            localStorage.setItem("seperator", "No");
         }
         // store brightness setting
         var brightness = document.getElementsByName("brightness"); 
