@@ -5,13 +5,16 @@
 
 
 <div class="container">
-    <div class="container" style="height:400px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
-      <h5 style="float: right;">Account: <script>
-          document.write(localStorage.getItem("copies"))
-      </script></h5>
+    <div class="container" style="height:450px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
+        <h5 style="float: right;">
+            Account:
+            <script>
+                document.write(localStorage.getItem("code"))
+            </script>
+        </h5>
         <h5>Enter Number of Copies:</h5>
         <form action="options.html">
-            <div>
+            <div style="margin-left: 150px;">
                 <div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
                     <div class="btn-group">
                         <input class="text-center form-control-lg mb-2" id="copies">
@@ -38,8 +41,8 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
+            
+            
         </form>
         <button class="btn btn-primary" onclick="back()">Cancel</button>
     </div>

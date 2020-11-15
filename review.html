@@ -4,52 +4,62 @@
 </head>
 
 <div class="container">
-    <div class="container" style="height:400px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
-        <h5 style="float: right;">Account: <script>
-            document.write(localStorage.getItem("code"))
-        </script></h5>
+    <div class="container" style="height:420px; width: 700px; margin-top:50px; padding:3%; border: 1px solid black;">
+        <h5 style="float: right;">
+            Account:
+            <script>
+                document.write(localStorage.getItem("code"))
+            </script>
+        </h5>
         <h5><b>Review Copy Settings</b></h5>
         <hr>
         <div>
-            <span style="margin-right:10px;"><b>Number of Copies: </b>
+            <span style="margin-right:10px;">
+                <b>Number of Copies: </b>
                 <script>
                     document.write(localStorage.getItem("copies"))
                 </script>
             </span>
             <hr>
-            <span style="margin-right:10px;"><b>Paper Source: </b>Bin 
-                  <script>
+            <span style="margin-right:10px;">
+                <b>Paper Source: </b>Bin
+                <script>
                     document.write(localStorage.getItem("source"))
-                  </script>
+                </script>
             </span>
             <hr>
-            <span style="margin-right:10px;"><b>Sides: </b>
+            <span style="margin-right:10px;">
+                <b>Sides: </b>
                 <script>
                     document.write(localStorage.getItem("sides"))
                 </script>
             </span>
             <hr>
-            <span style="margin-right:10px;"><b>Separator Page: </b>
+            <span style="margin-right:10px;">
+                <b>Separator Page: </b>
                 <script>
                     document.write(localStorage.getItem("seperator"))
                 </script>
             </span>
             <!-- make this conditional -->
-            <span style="margin-left:50px; margin-right:10px;"><b>Paper Source: </b>
-              <script>
-                  document.write(localStorage.getItem("seperator_source"))
-              </script>
+            <span style="margin-left:50px; margin-right:10px;">
+                <b>Paper Source: </b>
+                <script>
+                    document.write(localStorage.getItem("seperator_source"))
+                </script>
             </span>
             <hr>
-            <span style="margin-right:10px;"><b>Brightness: </b>
+            <span style="margin-right:10px;">
+                <b>Brightness: </b>
                 <script>
                     document.write(localStorage.getItem("brightness"))
                 </script>
             </span>
         </div>
+        <br />
+        <button class="btn btn-primary" onclick="back()">Back</button>
+        <button class="btn btn-primary" onclick="redirect()" style="float: right">Submit Job</button>
     </div>
-    <button class="btn btn-primary" onclick="back()">Back</button>
-    <button class="btn btn-primary" onclick="redirect()" style="float: right">Submit Job</button>
 </div>
 
 <script>
