@@ -9,80 +9,78 @@
         <h5 style="float: right;">Account: <script>
             document.write(localStorage.getItem("code"))
         </script></h5>
-        <h5>Options:</h5><hr>
+        <h5><b>Options</b></h5><hr>
                          <form>
+                              <span style="font-weight:bold; margin-right:10px;">Source Bin:</span>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="source" value="A">
+                                  <label class="form-check-label" for="source">A</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="source" value="B">
+                                  <label class="form-check-label" for="source">B</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="source" value="C">
+                                  <label class="form-check-label" for="source">C</label>
+                              </div>
+                              <hr>
+
                              <span style="font-weight:bold; margin-right:10px;">Siding:</span>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                 <label class="form-check-label" for="inlineRadio1">1->1</label>
+                                 <input class="form-check-input" type="radio" name="sides" value="1&rarr;1">
+                                 <label class="form-check-label" for="sides">1&rarr;1</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                 <label class="form-check-label" for="inlineRadio2">2->1</label>
+                                 <input class="form-check-input" type="radio" name="sides" value="2&rarr;2">
+                                 <label class="form-check-label" for="sides">2&rarr;2</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                 <label class="form-check-label" for="inlineRadio3">1->2</label>
+                                 <input class="form-check-input" type="radio" name="sides" value="1&rarr;2">
+                                 <label class="form-check-label" for="sides">1&rarr;2</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                 <label class="form-check-label" for="inlineRadio4">2->2</label>
-                             </div>
-                             <hr>
-
-
-                             <span style="font-weight:bold; margin-right:10px;">Source Bin:</span>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1">
-                                 <label class="form-check-label" for="inlineRadio1">A</label>
-                             </div>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
-                                 <label class="form-check-label" for="inlineRadio1">B</label>
-                             </div>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
-                                 <label class="form-check-label" for="inlineRadio3">C</label>
+                                 <input class="form-check-input" type="radio" name="sides" value="2&rarr;1">
+                                 <label class="form-check-label" for="sides">2&rarr;1</label>
                              </div>
                              <hr>
 
                              <span style="font-weight:bold; margin-right:10px;">Separator Page:</span>
                              <div class="form-check form-check-inline">
-                                 <input style="margin-left:10px;" type="checkbox" class="form-check-input" id="exampleCheck1">
-                             </div><br>
-                             <span style="font-weight:bold; margin-left:50px; margin-right:10px;">Source:</span>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1">
-                                 <label class="form-check-label" for="inlineRadio1">A</label>
-                             </div>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2">
-                                 <label class="form-check-label" for="inlineRadio1">B</label>
-                             </div>
-                             <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3">
-                                 <label class="form-check-label" for="inlineRadio3">C</label>
+                                 <input style="margin-left:10px; display: inline;" type="checkbox" class="form-check-input" id="seperator">
+                                 <span class="conditional" style="font-weight:bold; margin-left:50px; margin-right:10px;">Source:</span>
+                                  <div class="conditional form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="seperator_source" value="A">
+                                      <label class="form-check-label" for="seperator_source">A</label>
+                                  </div>
+                                  <div class="conditional form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="seperator_source" value="B">
+                                      <label class="form-check-label" for="seperator_source">B</label>
+                                  </div>
+                                  <div class="conditional form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="seperator_source" value="C">
+                                      <label class="form-check-label" for="seperator_source">C</label>
+                                  </div>
                              </div>
                              <hr>
 
                              <span style="font-weight:bold; margin-right:10px;">Brightness:</span>
-                             <form>
-                                 <div class="form-group">
-                                     <label for="formControlRange">Example Range input</label>
+                             <!--<<form>
+                                 div class="form-group">
                                      <input type="range" class="form-control-range" id="formControlRange">
                                  </div>
-                             </form>
+                             </form>-->
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                                 <label class="form-check-label" for="inlineCheckbox5">Dark</label>
+                                 <input class="form-check-input" type="checkbox" name="brightness" value="Dark">
+                                 <label class="form-check-label" for="brightness">Dark</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-                                 <label class="form-check-label" for="inlineCheckbox6">Normal</label>
+                                 <input class="form-check-input" type="checkbox" name="brightness" value="Normal">
+                                 <label class="form-check-label" for="brightness">Normal</label>
                              </div>
                              <div class="form-check form-check-inline">
-                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
-                                 <label class="form-check-label" for="inlineCheckbox7">Bright</label>
+                                 <input class="form-check-input" type="checkbox" name="brightness" value="Bright">
+                                 <label class="form-check-label" for="brightness">Bright</label>
                              </div>
                              <br>
                              <br>
@@ -94,11 +92,55 @@
 
 
 <script>
-    function redirect()
-    {
-            window.location.href = "submitted.html";
+    function redirect() {
+        // store source setting
+        var source = document.getElementsByName("source"); 
+        for(i = 0; i < source.length; i++) { 
+            if (source[i].checked) {
+                localStorage.setItem("source", source[i].value);
+            }    
+        } 
+        // store sides setting
+        var sides = document.getElementsByName("sides"); 
+        for(i = 0; i < sides.length; i++) { 
+            if (sides[i].checked) {
+                localStorage.setItem("sides", sides[i].value);
+            }    
+        } 
+        // store seperator settings
+        if (document.getElementById("seperator").checked) {
+            var seperator_source = document.getElementsByName("seperator_source"); 
+            for(i = 0; i < seperator_source.length; i++) { 
+                if (seperator_source[i].checked) {
+                    console.log(seperator_source[i].value)
+                    localStorage.setItem("seperator_source", "Yes - Bin " + seperator_source[i].value);
+                }    
+            } 
+        }
+        else {
+            localStorage.setItem("seperator_source", "No");
+        }
+        // store brightness setting
+        var brightness = document.getElementsByName("brightness"); 
+        for(i = 0; i < brightness.length; i++) { 
+            if (brightness[i].checked) {
+                localStorage.setItem("brightness", brightness[i].value);
+            }    
+        } 
+        window.location.href = "review.html";
     } 
+
     function back() {
         window.location.href = "numcopies.html";
     }
 </script>
+
+<style>
+    .conditional {
+        visibility: hidden;
+    }
+
+    input[type="checkbox"]:checked ~ .conditional {
+        visibility: visible;
+    }
+</style>

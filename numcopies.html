@@ -9,7 +9,7 @@
       <h5 style="float: right;">Account: <script>
           document.write(localStorage.getItem("code"))
       </script></h5>
-        <h5>Number of Copies:</h5>
+        <h5>Enter Number of Copies:</h5>
         <form action="options.html">
             <div>
                 <div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
@@ -47,6 +47,7 @@
 
 <script>
     function redirect() {
+        localStorage.setItem("copies", document.getElementById('code').value);
         window.location.href = "options.html";
     }
 
