@@ -109,12 +109,10 @@
         } 
         // store seperator settings
         if (document.getElementById("seperator").checked) {
-            localStorage.setItem("seperator", "Yes")
             var seperator_source = document.getElementsByName("seperator_source"); 
             for(i = 0; i < seperator_source.length; i++) { 
                 if (seperator_source[i].checked) {
-                    console.log(seperator_source[i].value)
-                    localStorage.setItem("seperator_source", "Bin " + seperator_source[i].value);
+                    localStorage.setItem("seperator", "Yes - Bin " + seperator_source[i].value);
                 }    
             } 
         }
